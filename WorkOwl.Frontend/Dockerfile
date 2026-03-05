@@ -28,6 +28,11 @@ RUN dotnet publish "WorkOwl.Frontend.csproj" -c Release -o /app/publish \
 FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine AS runtime
 WORKDIR /app
 
+# OCI-metadata som kobler Docker-imaget til GitHub-repoet
+LABEL org.opencontainers.image.source=https://github.com/aliman00/WorkOwl
+LABEL org.opencontainers.image.description="WorkOwl Frontend – Blazor Server"
+LABEL org.opencontainers.image.licenses=MIT
+
 # Opprett non-root user for security
 RUN addgroup -g 1000 appuser && \
     adduser -u 1000 -G appuser -s /bin/sh -D appuser && \

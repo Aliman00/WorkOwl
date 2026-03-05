@@ -1,5 +1,8 @@
 # WorkOwl
 
+[![Build and Test](https://github.com/aliman00/WorkOwl/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/aliman00/WorkOwl/actions/workflows/build-and-test.yml)
+[![Build and Push Docker Images](https://github.com/aliman00/WorkOwl/actions/workflows/docker-build-push.yml/badge.svg)](https://github.com/aliman00/WorkOwl/actions/workflows/docker-build-push.yml)
+
 Kompetanse- og HMS-portal for effektiv styring av opplæring, sertifikater og verneutstyr.
 
 ## Om prosjektet
@@ -27,6 +30,15 @@ WorkOwl/
 ├── WorkOwl.Tests/      # xUnit tester
 └── docs/               # Prosjektdokumentasjon
 ```
+
+## Docker Images
+
+Ferdige images publiseres automatisk til GitHub Container Registry ved push til `main`.
+
+| Image | Pull-kommando |
+|---|---|
+| Backend | `docker pull ghcr.io/aliman00/workowl-backend:latest` |
+| Frontend | `docker pull ghcr.io/aliman00/workowl-frontend:latest` |
 
 ## Komme i gang
 
