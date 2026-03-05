@@ -37,17 +37,22 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore WorkOwl.slnx
     
-    # Steg 4: Kompiler hele løsningen i Release-modus
+    # Steg 4: Sjekk at koden følger standard C#-formatering
+    # Feiler hvis noen har committed kode med feil innrykk eller spacing
+    - name: Check code formatting
+      run: dotnet format WorkOwl.slnx --verify-no-changes --verbosity diagnostic
+    
+    # Steg 5: Kompiler hele løsningen i Release-modus
     # --no-restore hopper over restore siden vi allerede gjorde det i forrige steg
     - name: Build solution
       run: dotnet build WorkOwl.slnx --configuration Release --no-restore
     
-    # Steg 5: Kjør alle enhetstester og lagre resultatet i en .trx-fil
+    # Steg 6: Kjør alle enhetstester og lagre resultatet i en .trx-fil
     # --no-build hopper over bygging siden vi allerede kompilerte i forrige steg
     - name: Run tests
       run: dotnet test WorkOwl.slnx --configuration Release --no-build --verbosity normal --logger "trx;LogFileName=test-results.trx"
     
-    # Steg 6: Publiser testresultatene som en lesbar rapport i GitHub Actions
+    # Steg 7: Publiser testresultatene som en lesbar rapport i GitHub Actions
     # "if: always()" sørger for at rapporten vises selv om testene feiler
     - name: Publish test results
       uses: dorny/test-reporter@v1

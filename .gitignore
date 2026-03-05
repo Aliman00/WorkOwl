@@ -29,8 +29,6 @@ nuget.config
 *.log
 logs/
 
-# Docker
-.dockerignore
 
 # Environment / secrets
 .env
