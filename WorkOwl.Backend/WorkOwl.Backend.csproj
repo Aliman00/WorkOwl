@@ -18,4 +18,19 @@
     <ProjectReference Include="..\WorkOwl.Shared\WorkOwl.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Auth\" />
+    <Folder Include="Features\Documents\" />
+    <Folder Include="Features\Equipment\" />
+    <Folder Include="Features\Notifications\" />
+    <Folder Include="Features\Onboarding\" />
+    <Folder Include="Features\Reports\" />
+    <Folder Include="Features\Requirements\" />
+    <Folder Include="Infrastructure\BackgroundJobs\" />
+    <Folder Include="Infrastructure\Cache\" />
+    <Folder Include="Infrastructure\Cleanup\" />
+    <Folder Include="Infrastructure\Middleware\" />
+    <Folder Include="Infrastructure\Security\" />
+  </ItemGroup>
+
 </Project>
