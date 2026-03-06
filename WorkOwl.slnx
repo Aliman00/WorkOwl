@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="WorkOwl.Backend/WorkOwl.Backend.csproj" />
+  <Project Path="WorkOwl.Frontend/WorkOwl.Frontend.csproj" />
+  <Project Path="WorkOwl.Shared/WorkOwl.Shared.csproj" />
+  <Project Path="WorkOwl.Tests/WorkOwl.Tests.csproj" />
+</Solution>

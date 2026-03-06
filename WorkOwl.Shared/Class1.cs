@@ -1,0 +1,6 @@
+﻿namespace WorkOwl.Shared;
+
+public class Class1
+{
+
+}
